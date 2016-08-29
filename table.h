@@ -18,16 +18,22 @@ private:
     int ncols;
     int nelems;
     int nrand;
-    int **arry;
-    //std::vector<std::vector<int>> vec();
-    
+    std::string filename = "example.csv";
+
 public:
-    void rows(int);
-    void columns(int);
-    void box();
-    void display();
-    void fillBox(int **arr);
-    int random();
+    struct DataTable
+    {
+        std::vector<std::string> date;
+        std::vector<std::string> stock;
+        std::vector<double> price;
+    };
+
+    std::vector<std::string> database;
+    void createFile();
+    void readFile();
+    void openFile();
+    void addEntry();
+    std::string getLine(int);
 };
 
 

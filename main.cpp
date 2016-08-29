@@ -7,29 +7,19 @@
 //
 
 #include <iostream>
+#include <vector>
+#include <string>
 #include "table.h"
 
-struct Stock
-{
-    std::string name;
-    double price;
-};
 
 int main(int argc, const char * argv[]) {
-    Table sudoku;
-    Stock comp;
-    int **arry;
-    arry = new int *[9];
-    for(int i = 0; i < 9; i++)
-    {
-        arry[i] = new int[9];
-    }
-    
-    sudoku.rows(9);
-    sudoku.columns(9);
-    sudoku.box();
-    sudoku.fillBox(arry);
-    sudoku.display();
+    Table::DataTable csvTable;
+    Table table;
+    std::string name;
+    std::string header;
+
+    table.readFile();
+    header = table.getLine(0);
     
     return 0;
 }

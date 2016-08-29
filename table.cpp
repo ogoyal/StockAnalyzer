@@ -10,53 +10,70 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
+#include <fstream>
+#include <string>
 #include "table.h"
 
-
-void Table::rows(int num)
+void Table::openFile()
 {
-    nrows = num;
-}
+    std::string line;
+    std::ofstream myFile(filename);
 
-void Table::columns(int num)
-{
-    ncols = num;
-}
-
-void Table::box()
-{
-    nelems = nrows * ncols;
-}
-
-void Table::fillBox(int **arr)
-{
-    srand(time(NULL));
-    for(int i = 0; i < nrows; i++)
+    myFile << "Date" << "," << "Stock" << "," << "Price" << '\n';
+    if(myFile.is_open())
     {
-        for(int j = 0; j < ncols; j++)
+        while (std::getline(std::cin,line))
         {
-            arr[i][j] = random();
+            if (not std::strcmp(line.c_str(), "Quit"))
+            {
+                break;
+            }
+            myFile << line << '\n';
+            database.push_back(line);
         }
     }
-    arry = arr;
-}
- 
-void Table::display()
-{
-    std::cout << "Box Values: " << std::endl;
-    for(int i = 0; i < nrows; i++)
+
+    else
     {
-        for(int j = 0; j < ncols; j++)
-        {
-            std::cout << arry[i][j] << " ";
-        }
-        std::cout << std::endl;
+        std::cout << "Error opening file" << std::endl;
     }
+
+    myFile.close();
 }
 
-int Table::random()
+void Table::readFile()
 {
-    nrand = rand() % 9 + 1;
-    return nrand;
+    std::ifstream myFile(filename);
+    std::string line;
+    while (myFile.good())
+    {
+        getline(myFile, line);
+        database.push_back(line);
+        //getline(myFile, value, ',' ); // read a string until next comma
+        std::cout << std::string(line);
+    }
+    myFile.close();
 }
 
+void Table::addEntry()
+{
+    std::ofstream myFile(filename);
+    std::string line;
+    std::getline(std::cin,line);
+    myFile << line << '\n';
+}
+
+std::string Table::getLine(int num)
+{
+    std::string line;
+    if(!database.empty())
+    {
+        line = database.at(num);
+    }
+    else
+    {
+        std::cout << "Database is empty!" << std::endl;
+        return "";
+    }
+    return line;
+}
