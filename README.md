@@ -1,9 +1,7 @@
 # CSVTableContainer
 C++ Program using Standard Library
 
-### Run stocks.py to produce csv file 
+### Produce csv file before running C++ program 
 ```
 python stocks.py
 ```
-
-### C++ program reads data from csv file
