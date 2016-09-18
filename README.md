@@ -8,7 +8,7 @@ python stocks.py
 
 Sample CSV data file:
 
-| Data       | Stocks    | Price   | Change  |
+| Data       | Stocks    | Price($)| Change  |
 | ---------- | --------- | ------- | ------- |
 | 2016-09-16 | GOOG      |768.88   | +3.14   |
 | 2016-09-16 | COST      |152.35   | -0.32   |
