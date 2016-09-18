@@ -47,8 +47,12 @@ def data(slist):
     return lines
 
 def main():
-    names = ['COST','ATVI','MSFT','GE','BA','AMD','UPS','FB','AMZN','PCG','AAPL','AMC','NFLX','WMT','FDX']
-    output(names)
+    tickers = []
+    f = open('tickers.txt', 'r')
+    for line in f:
+        tickers.append(line.strip())
+    f.close()
+    output(tickers)
 
 if __name__== "__main__":
     main()
