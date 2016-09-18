@@ -10,16 +10,19 @@
 #include <vector>
 #include <string>
 #include "table.h"
-
+#include "graph.h"
 
 int main(int argc, const char * argv[]) {
     Table::DataTable csvTable;
-    Table table;
+    Table stocks;
+    Graph graph;
     std::string name;
     std::string header;
 
-    table.readFile();
-    header = table.getLine(0);
+    stocks.readFile();
+    header = stocks.getLine(0);
+    
+    graph.getData(stocks);
     
     return 0;
 }
