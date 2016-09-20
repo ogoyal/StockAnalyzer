@@ -1,20 +1,16 @@
-CC=g++
-CFLAGS=-c -Wall
+all: build csv output
 
-all: output
+build:
+	mkdir -p build
 
-output: main.o table.o graph.o
-	$(CC) main.o table.o graph.o -o output
+csv:
+	python python/stocks.py
+	mv example.csv build/
 
-main.o: main.cpp
-	$(CC) $(CFLAGS) main.cpp
-
-table.o: table.cpp
-	$(CC) $(CFLAGS) table.cpp
-
-graph.o: graph.cpp
-	$(CC) $(CFLAGS) Graph.cpp
+output:
+	cd build; cmake ../; \
+	make
 
 clean:
-	rm *o output
+	rm -rf build
 
