@@ -12,17 +12,20 @@
 #include <stdio.h>
 #include <iostream>
 #include "table.h"
+#include <map>
 
 class Graph
 {
 private:
     int xaxis;
     int yaxis;
+    float value;
     std::string horizontal;
     std::string vertical;
     std::string name;
     std::string delta;
     std::string filename = "example.csv";
+    std::map<std::string, std::string> sconn;
     
 public:
     void createGraph();

@@ -16,7 +16,12 @@
 
 void Graph::createGraph()
 {
-    
+    std::string::size_type *idx;
+    for (auto c: sconn)
+    {
+        value = stod(c.second, idx = 0);
+        //std::cout << c.first << " " << value << std::endl;
+    }    
 }
 
 void Graph::displayData(std::vector<Table> data)
@@ -33,16 +38,16 @@ std::string Graph::getWord(std::string line, int index)
 
 void Graph::getData(Table stocks)
 {
-
+    bool first = true;
     for(auto c: stocks.database)
     {
-        if (! c.empty())
+        if (! c.empty() and first == false)
         {
             name = getWord(c,1);
             delta = getWord(c,3);
-            std::cout << name << " " << delta << std::endl;
+	    sconn[name] = delta;
         }
+	first=false;
     }
-    // std::vector<Table> data;
-    // return data;
+
 }
