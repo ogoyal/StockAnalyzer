@@ -20,7 +20,7 @@ void Graph::createGraph()
     for (auto c: sconn)
     {
         value = stod(c.second, idx = 0);
-        //std::cout << c.first << " " << value << std::endl;
+        std::cout << c.first << " " << value << std::endl;
     }    
 }
 
