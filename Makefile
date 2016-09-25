@@ -1,5 +1,7 @@
 all: build csv output
 
+jenkins: build csv
+
 build:
 	mkdir -p build
 
