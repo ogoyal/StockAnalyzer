@@ -1,10 +1,13 @@
 # CSVTableContainer
 C++ Program using Standard Library
 
-### Produce csv file
+### Run make
 ```
-python stocks.py
+make
 ```
+
+Runs python program to produce a stock data csv file. Program uses yahoo-finance api to pull stock info.
+Creates a C++ program to do data analytics.
 
 Sample CSV data file:
 

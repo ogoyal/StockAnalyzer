@@ -1,6 +1,6 @@
 all: build csv output readme
 
-jenkins: build csv
+jenkins: build csv readme
 
 build:
 	mkdir -p build
