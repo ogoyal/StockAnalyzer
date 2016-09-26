@@ -1,7 +1,7 @@
 # CSVTableContainer
-C++ Program using Standard Library
+C++ Program
 
-### Run make
+### Run make in Workspace
 ```
 make
 ```
