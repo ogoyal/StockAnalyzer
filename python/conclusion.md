@@ -1,14 +1,3 @@
-# CSVTableContainer
-C++ Program using Standard Library
-
-### Produce csv file
-```
-python stocks.py
-```
-
-Sample CSV data file:
-
-#include python/data.md
 
 ### Build/Run project in XCode
 

@@ -11,14 +11,14 @@ import csv
 def addVertical(line):
     l = ""
     for word in line:
-        l+=(' | ' + word)
+        l+=('| ' + word)
     l+=" | \n"
     return l
 
 def addHeader(line):
     l = ""
     for i in range(0, len(line)):
-        l += " | --- "
+        l += "| --- "
     l+=" | \n"
     return l
 
