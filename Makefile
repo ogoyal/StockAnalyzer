@@ -1,4 +1,4 @@
-all: build csv output
+all: build csv output readme
 
 jenkins: build csv
 
