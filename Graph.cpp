@@ -16,10 +16,10 @@
 
 void Graph::createGraph()
 {
-    std::string::size_type *idx;
+    std::string::size_type idx;
     for (auto c: sconn)
     {
-        value = stod(c.second, idx = 0);
+        value = std::stof(c.second, &idx);
         std::cout << c.first << " " << value << std::endl;
     }    
 }
@@ -27,6 +27,23 @@ void Graph::createGraph()
 void Graph::displayData(std::vector<Table> data)
 {
 
+}
+
+std::vector<float> Graph::getPrice()
+{
+    //std::string::size_type *idx;
+    char* idx;
+    std::vector<float> rPrice;
+    try {
+    for (auto c: sconn) {
+        value = std::strtof(c.second.c_str(), &idx);
+	rPrice.push_back(value);
+      }
+    }
+    catch(...) {
+        std::cout << "Something wrong with stof" << std::endl;
+    }
+    return rPrice;
 }
 
 std::string Graph::getWord(std::string line, int index)

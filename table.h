@@ -25,7 +25,7 @@ public:
     {
         std::vector<std::string> date;
         std::vector<std::string> stock;
-        std::vector<double> price;
+        std::vector<float> price;
     };
 
     std::vector<std::string> database;

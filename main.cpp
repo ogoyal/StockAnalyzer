@@ -23,7 +23,8 @@ int main(int argc, const char * argv[]) {
     header = stocks.getLine(0);
     
     graph.getData(stocks);
-    graph.createGraph();    
+    //graph.createGraph();    
+    csvTable.price = graph.getPrice();
 
     return 0;
 }

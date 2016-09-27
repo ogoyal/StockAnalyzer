@@ -8,4 +8,4 @@ SET(${PROJECT_NAME}_MINOR_VERSION 0)
 SET(${PROJECT_NAME}_PATCH_LEVEL 0)
 
 add_executable(output main.cpp table.cpp Graph.cpp)
-
+add_definitions ("-Wall")

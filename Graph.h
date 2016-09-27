@@ -31,6 +31,7 @@ public:
     void createGraph();
     void displayData(std::vector<Table>);
     void getData(Table);
+    std::vector<float> getPrice();
     std::string getWord(std::string, int);
 };
 
