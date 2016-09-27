@@ -1,5 +1,5 @@
 
-### Build/Run project in XCode
+### Build/Run project
 
 Program will monitor stocks daily. Append your list of stocks in tickers.txt
 

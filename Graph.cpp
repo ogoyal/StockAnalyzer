@@ -16,12 +16,7 @@
 
 void Graph::createGraph()
 {
-    std::string::size_type idx;
-    for (auto c: sconn)
-    {
-        value = std::stof(c.second, &idx);
-        std::cout << c.first << " " << value << std::endl;
-    }    
+
 }
 
 void Graph::displayData(std::vector<Table> data)
@@ -31,7 +26,6 @@ void Graph::displayData(std::vector<Table> data)
 
 std::vector<float> Graph::getPrice()
 {
-    //std::string::size_type *idx;
     char* idx;
     std::vector<float> rPrice;
     try {
@@ -41,7 +35,7 @@ std::vector<float> Graph::getPrice()
       }
     }
     catch(...) {
-        std::cout << "Something wrong with stof" << std::endl;
+        std::cout << "Something wrong with strtof" << std::endl;
     }
     return rPrice;
 }

@@ -25,6 +25,10 @@ int main(int argc, const char * argv[]) {
     graph.getData(stocks);
     //graph.createGraph();    
     csvTable.price = graph.getPrice();
+    std::cout << "*********" << std::endl;
+    for(auto c: csvTable.price) {
+        std::cout << c << std::endl;
+    }
 
     return 0;
 }
