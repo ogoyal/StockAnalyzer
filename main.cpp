@@ -17,15 +17,11 @@ int main(int argc, const char * argv[]) {
     Table stocks;
     Graph graph;
     std::string name;
-    std::string header;
 
     stocks.readFile();
-    header = stocks.getLine(0);
     
     graph.getData(stocks);
-    //graph.createGraph();    
     csvTable.price = graph.getPrice();
-    std::cout << "*********" << std::endl;
     for(auto c: csvTable.price) {
         std::cout << c << std::endl;
     }

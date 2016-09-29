@@ -16,8 +16,7 @@ output:
 
 readme:
 	cp python/csvtomd.py build/readme
-	cp python/intro.md build/readme
-	cp python/conclusion.md build/readme
+	cp python/*.md build/readme
 	cp build/example.csv build/readme
 	cd build/readme; python csvtomd.py; cat intro.md data.md conclusion.md > README.md; mv README.md ../../
 
