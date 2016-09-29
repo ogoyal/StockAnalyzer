@@ -49,8 +49,6 @@ void Table::readFile()
     {
         getline(myFile, line);
         database.push_back(line);
-        //getline(myFile, value, ',' ); // read a string until next comma
-        //std::cout << std::string(line);
     }
     myFile.close();
 }
