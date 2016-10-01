@@ -19,9 +19,18 @@ void Graph::createGraph()
 
 }
 
-void Graph::displayData(std::vector<Table> data)
+std::vector<std::string> Graph::getName()
 {
-
+    std::vector<std::string> rName;
+    try {
+        for (auto c: sconn) {
+            rName.push_back(c.first);
+        }
+    }
+    catch(...) {
+        std::cout << "Something wrong with name" << std::endl;
+    }
+    return rName;        
 }
 
 std::vector<float> Graph::getPrice()

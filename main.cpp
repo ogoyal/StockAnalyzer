@@ -17,13 +17,27 @@ int main(int argc, const char * argv[]) {
     Table stocks;
     Graph graph;
     std::string name;
+    std::map<std::string, float> csvMap;
 
     stocks.readFile();
     
     graph.getData(stocks);
+    csvTable.name = graph.getName();
     csvTable.price = graph.getPrice();
-    for(auto c: csvTable.price) {
-        std::cout << c << std::endl;
+
+    try {
+        int range = csvTable.name.size();
+        if(csvTable.name.size() == csvTable.price.size()) {
+            for(int i = 0; i < range; i++) {
+	    	csvMap[csvTable.name[i]] = csvTable.price[i];
+	    }
+	}
+    }
+    catch(...) {
+	std::cout << "name & price vectors size difference" << std::endl;
+    }
+    for(auto c: csvMap) {
+        std::cout << c.first << " " << c.second <<std::endl;
     }
 
     return 0;

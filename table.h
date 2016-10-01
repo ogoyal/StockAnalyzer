@@ -24,7 +24,7 @@ public:
     struct DataTable
     {
         std::vector<std::string> date;
-        std::vector<std::string> stock;
+        std::vector<std::string> name;
         std::vector<float> price;
     };
 
