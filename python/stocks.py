@@ -32,7 +32,7 @@ def output(slist):
     lines = data(slist)
     try:
         writer = csv.writer(f)
-        writer.writerow(('Date', 'Stocks', 'Price', 'Change'))
+        writer.writerow(('Date', 'Stocks', 'Price($)', 'Change($)'))
         for i in range(0, len(lines)):
             writer.writerow(lines[i])
     finally:

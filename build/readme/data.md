@@ -1,16 +1,3 @@
-# CSVTableContainer
-C++ Program using Standard Library
-
-### Run make
-```
-make
-```
-
-Runs python program to produce a stock data csv file. Program uses yahoo-finance api to pull stock info.
-Creates a C++ program to do data analytics.
-
-Sample CSV data file:
-
 | Date| Stocks| Price($)| Change($) | 
 | --- | --- | --- | ---  | 
 | 2016-09-30| COST| 152.51| +5.02 | 
@@ -28,15 +15,3 @@ Sample CSV data file:
 | 2016-09-30| NFLX| 98.55| +1.88 | 
 | 2016-09-30| WMT| 72.12| +1.39 | 
 | 2016-09-30| FDX| 175.00| -0.12 | 
-
-### Build/Run project
-
-Program will monitor stocks daily. Append your list of stocks in tickers.txt
-
-### APIs
-yahoo-finance 1.1.4 : Python module to get stock data from Yahoo! Finance
-
-```
-pip install yahoo-finance
-```
-
