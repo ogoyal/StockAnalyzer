@@ -1,0 +1,10 @@
+#!/Users/ojasgoyal/Documents/C++/github/CSVTableContainer/StockAnalyzer/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'yahoo-finance==1.2.1','console_scripts','yahoo-finance'
+__requires__ = 'yahoo-finance==1.2.1'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('yahoo-finance==1.2.1', 'console_scripts', 'yahoo-finance')()
+    )
