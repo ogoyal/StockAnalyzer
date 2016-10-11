@@ -1,2 +1,4 @@
 wsgiref==0.1.2
 yahoo_finance==1.2.1
+django==1.9.1
+
