@@ -1,4 +1,4 @@
-# CSVTableContainer
+# StockAnalyzer
 C++ Program using Standard Library
 
 ### Run make
@@ -30,6 +30,12 @@ Sample CSV data file:
 | 2016-10-10| FDX| 174.21| +1.20 | 
 
 ### Build/Run project
+```
+source StockAnalyzer/bin/activate
+pip3 install -r requirements.txt
+#TODO Setup django environment - postgresql
+python3 manage.py runserver 0.0.0.0:8000
+```
 
 Program will monitor stocks daily. Append your list of stocks in tickers.txt
 
