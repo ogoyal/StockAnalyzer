@@ -1,0 +1,84 @@
+{% load staticfiles %}
+{% load bootstrap %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+      EdutainMe
+    </title>
+    <!-- Latest compiled and minified CSS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      
+    <link rel="stylesheet" href="{% static 'css/sass.css' %}">
+
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+    </script>
+    
+    <!--Meta Tags-->
+    
+  </head>
+  
+  <body>
+
+    {% include "/var/www/LearnDjango/StockAnalyzer/rank/template/navbar.html" %}
+
+    <div class="section1_login">
+      <div class="container">
+        <div class="row">
+                 
+          <!--Sign Up Jumbatron-->
+          
+          <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 signUp">
+            <!--bootstrap CSS offset needed instead of col-2-sm needed-->
+            <h1 class="col-sm-offset-4">
+              Login
+            </h1>
+
+            <!--BEGIN FORM-->            
+            <form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="form-group col-xs-12 col-sm-12">
+           
+                        {{ form.username | bootstrap}}
+                                                
+                        {{ form.password | bootstrap}}
+                        
+                    </div>
+                  
+                </div><!--end row--> <!--row for placing forms side by side with lables on top-->
+                        
+		<button type="submit" class="btn btn-info btn-md col-sm-10 col-sm-offset-1">Login</button>
+                
+            </form>
+            
+            <!--END FORM-->
+            
+          </div>
+          <!--SignUp Jumbatron-->
+          
+        </div>
+        <!--row-->
+        
+      </div>
+      <!--container-->
+      
+    </div>
+    <!--Section1_login-->    
+        
+  </body>
+</html>  

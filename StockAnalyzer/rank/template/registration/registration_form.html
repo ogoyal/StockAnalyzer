@@ -1,0 +1,45 @@
+{% load bootstrap %}
+<!--BEGIN FORM-->
+            
+<form class ="form-group col-sm-offset-7 col-sm-4 col-xs-12 col-xs-offset-0" role ="form" action="" enctype="multipart/form-data" method="POST"><!--IMPORTANT "/" MEANS INDEX, NOT /INDEX-->
+  {% csrf_token %}
+  <div class="row">
+    <div class="form-group col-xs-6 col-sm-6" style="display:inline-block">
+      {{ form.first_name | bootstrap }}
+      {{ form.error }}
+    </div>
+    
+    <div class="form-group col-xs-6 col-sm-6" style="display:inline-block">
+      {{ form.last_name | bootstrap }}
+      {{ form.error }} 
+    </div>
+  </div>
+  <!--end row-->
+  
+  <!--row for placing forms side by side with lables on top--> 
+  <div class="form-group"><!--PASSWORD 2 should be hidden by JS until above forms are filled-->
+    {{ form.email | bootstrap }}
+    {{ form.error }}
+  </div>
+  <div class="form-group">
+    {{ form.password1 | bootstrap }}
+    {{ form.error }}
+  </div>
+  <div class="form-group">
+    {{ form.password2 | bootstrap }}
+    {{ form.error }}
+  </div>
+      <!--
+      <div class="checkbox">
+	<label>
+	  <input type="checkbox"></input>
+          I agree to the User Agreement and Privacy Policy.
+        </label>
+      </div>
+      --><!--THIS GAVE FORM NOT VALID ERROR-->
+  
+  <button type="submit" class="btn btn-info btn-lg">
+    Sign Up
+  </button>
+</form>
+<!--END FORM-->
