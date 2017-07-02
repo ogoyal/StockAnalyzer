@@ -3,7 +3,6 @@ all: build csv output readme
 jenkins: build csv readme
 
 build:
-	mkdir -p build
 	mkdir -p build/readme
 
 csv:
