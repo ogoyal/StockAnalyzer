@@ -1,5 +1,4 @@
-# CSVTableContainer
-C++ Program using Standard Library
+# StockAnalyzer
 
 ### Run make
 ```
