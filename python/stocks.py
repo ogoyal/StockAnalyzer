@@ -10,16 +10,12 @@ import csv
 from yahoo_finance import Share
 
 class Stock(object):
-    def __init__(self, slist=[], name=''):
-        self.slist = slist
-        if self.slist != []:
-            self.name = slist[0]
-            self.company = Share(self.name)
-        if name != "":
-            self.name = name
+    def __init__(self, name=''):
+        self.company = Share(name)
 
-    def __iter__(self):
-        for company in self.slist:
+    @staticmethod
+    def __iter__(slist):
+        for company in slist:
             scalc = Stock(company)
             scalc_date = scalc.get_date()
             scalc_price = scalc.get_price()
@@ -42,8 +38,7 @@ class Stock(object):
 
 def output(slist):
     f = open('example.csv', 'wt')
-    company = Stock(slist)
-    cline = company.__iter__()
+    cline = Stock.__iter__(slist)
     try:
         writer = csv.writer(f)
         writer.writerow(('Date', 'Stocks', 'Price($)', 'Change($)'))
