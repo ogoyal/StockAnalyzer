@@ -27,8 +27,7 @@ class Stock(object):
             yield [scalc_date, company, scalc_price, scalc_delta]
 
     def get_price(self):
-        self.price = self.company.get_price()
-        return self.price
+        return self.company.get_price()
 
     def get_date(self):
         try:
@@ -39,8 +38,7 @@ class Stock(object):
         return self.date
 
     def get_delta(self):
-        self.delta = self.company.get_change()
-        return self.delta
+        return self.company.get_change()
 
 def output(slist):
     f = open('example.csv', 'wt')
