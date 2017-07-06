@@ -20,7 +20,8 @@ class Stock(object):
             scalc_date = scalc.get_date()
             scalc_price = scalc.get_price()
             scalc_delta = scalc.get_delta()
-            yield [scalc_date, company, scalc_price, scalc_delta]
+            scalc_percent_delta = scalc.get_percent_delta()
+            yield [scalc_date, company, scalc_price, scalc_delta, scalc_percent_delta]
 
     def get_price(self):
         return self.company.get_price()
@@ -36,12 +37,15 @@ class Stock(object):
     def get_delta(self):
         return self.company.get_change()
 
+    def get_percent_delta(self):
+        return self.company.get_percent_change()
+
 def output(slist):
     f = open('example.csv', 'wt')
     cline = Stock.__iter__(slist)
     try:
         writer = csv.writer(f)
-        writer.writerow(('Date', 'Stocks', 'Price($)', 'Change($)'))
+        writer.writerow(('Date', 'Stocks', 'Price($)', 'Change($)', 'Change(%)'))
         for i in range(len(slist)):
             writer.writerow(cline.next())
     finally:
