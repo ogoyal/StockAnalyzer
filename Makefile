@@ -10,7 +10,7 @@ csv:
 	mv example.csv build/
 
 output:
-	cd build; cmake ../; \
+	cd build; cmake ../C++/; \
 	make
 
 readme:
