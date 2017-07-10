@@ -7,5 +7,5 @@ make
 
 Runs python program to produce a stock data csv file. Program uses yahoo-finance api to pull stock info.
 
-Sample CSV data file:
+Sample data:
 
