@@ -6,5 +6,6 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^rank_list/$', views.rank_list, name='rank_list'),
     url(r'^logout$', views.logout_view, name='logout'),
+
 ]
 

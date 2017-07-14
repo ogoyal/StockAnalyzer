@@ -6,7 +6,6 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .forms import IndexSignUpForm
 import random
-# Create your views here.
 
 @login_required
 def rank_list(request):
@@ -21,9 +20,9 @@ def rank_list(request):
     return render(request, 'rank_list.html', {'tickers': tickers})
 
 def get_price(name):
-    #company = Share(name)
-    #return company.get_price()
-    return random.randint(0,len(name))*42
+    company = Share(name)
+    return company.get_price()
+    #return random.randint(0,len(name))*42
 
 def index(request):
      if request.method == "POST":
