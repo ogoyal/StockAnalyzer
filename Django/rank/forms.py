@@ -5,5 +5,5 @@ class IndexSignUpForm(forms.Form):
     first_name = forms.CharField(required=False)
     last_name = forms.CharField(required=False)
     username = forms.CharField(required=False)
-    password1 = forms.CharField(widget = forms.PasswordInput)
-    password2 = forms.CharField(widget = forms.PasswordInput)
+    password1 = forms.CharField(widget = forms.PasswordInput, label="Password")
+    password2 = forms.CharField(widget = forms.PasswordInput, label="Confirm Password")

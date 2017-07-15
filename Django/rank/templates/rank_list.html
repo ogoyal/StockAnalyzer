@@ -17,10 +17,36 @@
 	{% include "navbar.html" %}
 
     </head>
+
+	<style> 
+		.flex-container {
+		    display: -webkit-flex;
+		    display: flex;
+		    background-color: lightgrey;
+		}
+
+		.flex-item {
+		    margin: 10px;
+		}
+	</style>
+
     <body>
-        {% for tick, price in tickers.items %}
-        <p class="text-center">{{tick}}: {{price}}</p>
-        {% endfor %}
+      <div class="flex-item">
+	{% for tick, price in tickers.items %}
+	<p class="text-center">{{tick}}: {{price}}</p>
+	{% endfor %}
+
+       <form action="/add-stock/" method="post">
+  	{% csrf_token %}
+        <label for="stock_label"> Stock Ticker: </label>
+        <input id="ticker" type="text" name="ticker" value="{{ stock_name }}">
+        <input type="submit" value="Add">
+       </form>
+
+      </div>
+
+      <footer> Copyright &copy; StockAnalyzer </footer>
     </body>
+
 </html>
 

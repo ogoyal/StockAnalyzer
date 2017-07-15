@@ -5,10 +5,13 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .forms import IndexSignUpForm
-import random
 
 @login_required
 def rank_list(request):
+    tickers = process()
+    return render(request, 'rank_list.html', {'tickers': tickers})
+
+def process():
     tickers = {}
     fopen = open('../tickers.txt', 'r')
     for line in fopen:
@@ -16,13 +19,21 @@ def rank_list(request):
         price = get_price(key)
         tickers[key] = price
     fopen.close()
-
-    return render(request, 'rank_list.html', {'tickers': tickers})
+    return tickers
 
 def get_price(name):
     company = Share(name)
     return company.get_price()
-    #return random.randint(0,len(name))*42
+
+@login_required
+def add_stock(request):
+    tickers = process()
+    if request.method == "POST":
+        key = request.POST.get('ticker')
+        price = get_price(key)
+        if price != None:
+            tickers[key] = price
+    return render(request, 'rank_list.html', {'tickers': tickers})
 
 def index(request):
      if request.method == "POST":
