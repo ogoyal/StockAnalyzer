@@ -9,3 +9,5 @@ SET(${PROJECT_NAME}_PATCH_LEVEL 0)
 
 add_executable(output main.cpp table.cpp Graph.cpp)
 add_definitions ("-w")
+add_compile_options(-std=c++11)
+
