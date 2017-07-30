@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <stdlib.h>
+#include <cstring>
 #include <time.h>
 #include <fstream>
 #include <string>
@@ -24,7 +25,7 @@ void Table::openFile()
     {
         while (std::getline(std::cin,line))
         {
-            if (not std::strcmp(line.c_str(), "Quit"))
+            if (not strcmp(line.c_str(), "Quit"))
             {
                 break;
             }

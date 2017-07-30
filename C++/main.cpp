@@ -12,7 +12,7 @@
 #include <set>
 #include <unordered_map>
 #include "table.h"
-#include "graph.h"
+#include "Graph.h"
 
 typedef std::pair<std::string, float> csvPair;
 std::map<std::string, float> alphaOrder(std::vector<std::string> name, std::vector<float> price);
