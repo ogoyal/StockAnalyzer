@@ -3,6 +3,9 @@ language: python
 os:
   - osx
 
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install python ; fi
+
 # command to install dependencies
 install: "pip install -r requirements.txt"
 
