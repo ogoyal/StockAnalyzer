@@ -6,4 +6,5 @@ django-bootstrap-form==3.2.1
 psycopg2
 django-registration
 django_forms_bootstrap
+pytest
 
