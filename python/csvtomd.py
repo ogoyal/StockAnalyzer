@@ -8,6 +8,9 @@
 
 import csv
 
+csv_path = 'build/readme/example.csv'
+data_path = 'build/readme/data.md'
+
 def addVertical(line):
     l = ""
     for word in line:
@@ -23,8 +26,8 @@ def addHeader(line):
     return l
 
 def main():
-    fin = open('example.csv', 'r')
-    fout = open('data.md', 'w')
+    fin = open(csv_path, 'r')
+    fout = open(data_path, 'w')
     header = 1
     title = []
     for line in fin:
