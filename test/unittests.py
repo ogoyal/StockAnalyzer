@@ -1,30 +1,28 @@
-#import sys
-#sys.path.append("..")
-#import python.stocks
+import json
 import unittest
-from yahoo_finance import Share
+from googlefinance import getQuotes
 
 class StockAnalyzerTest(unittest.TestCase):
+
     def setUp(self):
-        self.company = Share("GOOG")
+        stock = getQuotes("GOOG")[0]
+        json_string = json.dumps(stock)
+        parsed_json = json.loads(json_string)
+	self.company = parsed_json
     
     '''
-    Test Yahoo Api Functions
+    Test Google Api Functions
     '''
-    def test_get_price(self):
-        price = self.company.get_price()
+    def test_get_date(self):
+        price = self.company['LastTradeDateTime'].split('T')[0]
         self.assertTrue(price)
-    
-    def test_get_change(self):
-        change_in_currency = self.company.get_change()
-        self.assertTrue(change_in_currency)
 
-    def test_get_percent_change(self):
-        change_in_percent = self.company.get_percent_change()
-        self.assertTrue(change_in_percent)
+    def test_symbol(self):
+        symbol = self.company['StockSymbol']
+        self.assertTrue(symbol)
 
-    def test_get_trade_datetime(self):
-        date = self.company.get_trade_datetime()
+    def test_get_price(self):
+        date = self.company['LastTradePrice']
         self.assertTrue(date)
 
     '''

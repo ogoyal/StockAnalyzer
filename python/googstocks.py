@@ -15,7 +15,7 @@ def data(tickers):
         parsed_json = json.loads(json_string)
         date = parsed_json['LastTradeDateTime'].split('T')[0]
         symbol = parsed_json['StockSymbol']
-        price = parsed_json['LastTradeWithCurrency']
+        price = parsed_json['LastTradePrice']
         slist.append([date, symbol, price])
     output(slist)
         
