@@ -8,7 +8,6 @@ build:
 
 csv:
 	python python/googstocks.py
-	mv example.csv build/readme
 
 output:
 	cd build; cmake ../C++/; \

@@ -7,6 +7,7 @@ from googlefinance import getQuotes
 {u'Index': u'NASDAQ', u'LastTradeWithCurrency': u'927.96', u'LastTradeDateTime': u'2017-08-04T16:00:00Z', u'LastTradePrice': u'927.96', u'LastTradeTime': u'4:00PM EDT', u'LastTradeDateTimeLong': u'Aug 4, 4:00PM EDT', u'StockSymbol': u'GOOG', u'ID': u'304466804484872'}
 '''
 
+csv_path = "build/readme/example.csv"
 def data(tickers):
     slist = []
     stocks = getQuotes(tickers)
@@ -20,7 +21,7 @@ def data(tickers):
     output(slist)
         
 def output(slist):
-    f = open('example.csv', 'wt')
+    f = open(csv_path, 'wt')
     try:
         writer = csv.writer(f)
         writer.writerow(('Date', 'Stocks', 'Price($)'))
