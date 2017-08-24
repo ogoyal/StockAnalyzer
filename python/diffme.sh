@@ -5,13 +5,14 @@ commit_prev=( $commit_ids ) # Get latest commit id
 file=README.md
 
 getdiff() {
-  # Log diff & ignore any diff errors
-  git diff $1:$file $2:$file >> delta.txt 2> /dev/null
+  # Diff between two commit ids
+  git diff $1:$file $2:$file
 }
 
 for commit in $commit_ids
 do
-  getdiff $commit $commit_prev
+  # Log diff & ignore any diff errors
+  getdiff $commit $commit_prev >> diff.log 2> /dev/null
   commit_prev=$commit
 done
 
