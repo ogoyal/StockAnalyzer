@@ -1,4 +1,5 @@
 import json
+import yaml
 import unittest
 from googlefinance import getQuotes
 
@@ -26,13 +27,10 @@ class StockAnalyzerTest(unittest.TestCase):
         self.assertTrue(date)
 
     '''
-    Test tickers.txt
+    Test tickers.yml
     '''
     def test_tickers(self):
-        tickers = []
-        f = open('tickers.txt', 'r')
-        for line in f:
-	    tickers.append(line.strip())
-        f.close()
+        with open('tickers.yml', 'r') as stream:
+            tickers = yaml.load(stream)
 	self.assertTrue(tickers)
 
