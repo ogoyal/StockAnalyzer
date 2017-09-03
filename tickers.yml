@@ -1,0 +1,26 @@
+sectors:
+  IT:
+    - MSFT
+    - FB
+    - AMD
+    - AAPL
+    - ATVI
+    - AMZN
+    - BOX
+
+  ENERGY:
+    - PCG
+    - TSLA
+    - GE
+  
+  SERVICES:
+    - COST
+    - WMT
+    - FDX
+    - UPS
+  
+  DEFENSE:
+    - BA
+    - LMT
+    - RTN 
+   

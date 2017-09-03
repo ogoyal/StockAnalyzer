@@ -1,6 +1,7 @@
 import os
 import csv
 import json
+import yaml
 from googlefinance import getQuotes
 
 '''
@@ -8,7 +9,7 @@ from googlefinance import getQuotes
 '''
 
 csv_path = "build/readme/example.csv"
-def data(tickers):
+def data(tickers, sector):
     slist = []
     stocks = getQuotes(tickers)
     for stock in stocks:
@@ -17,28 +18,39 @@ def data(tickers):
         date = parsed_json['LastTradeDateTime'].split('T')[0]
         symbol = parsed_json['StockSymbol']
         price = parsed_json['LastTradePrice']
-        slist.append([date, symbol, price])
+        slist.append([sector, date, symbol, price])
     output(slist)
-        
-def output(slist):
-    f = open(csv_path, 'wt')
+
+def setup():
+    if os.path.isfile(csv_path):
+        os.remove(csv_path)
+    f = open(csv_path, 'a+')
     try:
         writer = csv.writer(f)
-        writer.writerow(('Date', 'Stocks', 'Price($)'))
+        writer.writerow(('Sector', 'Date', 'Stocks', 'Price($)'))
+    finally:
+        f.close()
+        
+def output(slist):
+    f = open(csv_path, 'a+')
+    try:
+        writer = csv.writer(f)
         for data in slist:
             writer.writerow(data)
     finally:
         f.close()
 
 def main():
-    
-    tickers = []
-    if os.path.isfile('tickers.txt'):
-        f = open('tickers.txt', 'r')
-        for line in f:
-            tickers.append(line.strip())
-        f.close()
-    data(tickers)
+    setup()
+    if os.path.isfile('tickers.yml'):
+        with open("tickers.yml", 'r') as stream:
+            try:
+                tickers = yaml.load(stream)
+                sectors = tickers["sectors"]
+                for key in sorted(sectors, key=len):
+                    data(sectors[key], key)
+            except yaml.YAMLError as exc:
+                print(exc)
 
 if __name__== "__main__":
     main()
