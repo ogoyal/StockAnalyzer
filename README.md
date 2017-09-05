@@ -1,10 +1,5 @@
 # Stock Analyzer [![Build Status](https://travis-ci.org/ogoyal/StockAnalyzer.svg?branch=master)](https://travis-ci.org/ogoyal/StockAnalyzer)
 
-### Run make
-```
-make
-```
-
 Runs python program to produce a stock data csv file. Program uses google finance api to pull stock info.
 
 Today's data:
@@ -30,12 +25,16 @@ Today's data:
 
 ### Build/Run project
 
-Program will monitor stocks daily. Append your list of stocks in tickers.txt
+```
+make
+```
+
+Program will monitor stocks daily. Append your list of stocks in tickers.yml
 
 ### APIs
 googlefinance 0.7 : Python module to get stock data from Google Finance
 
 ```
-pip install googlefinance
+pip install -r requirements.txt
 ```
 
