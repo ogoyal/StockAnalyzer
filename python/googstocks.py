@@ -18,7 +18,7 @@ def data(tickers, sector):
         date = parsed_json['LastTradeDateTime'].split('T')[0]
         symbol = parsed_json['StockSymbol']
         price = parsed_json['LastTradePrice']
-        slist.append([sector, date, symbol, price])
+        slist.append([date, symbol, price])
     output(slist)
 
 def setup():
@@ -27,7 +27,7 @@ def setup():
     f = open(csv_path, 'a+')
     try:
         writer = csv.writer(f)
-        writer.writerow(('Sector', 'Date', 'Stocks', 'Price($)'))
+        writer.writerow(('Date', 'Stocks', 'Price($)'))
     finally:
         f.close()
         
