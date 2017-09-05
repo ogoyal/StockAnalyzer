@@ -1,2 +1,3 @@
 StockAnalyzer/StockAnalyzer/settings.py
 *.pyc
+Django/.Python
