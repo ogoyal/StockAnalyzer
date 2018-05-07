@@ -32,8 +32,8 @@ def main():
     title = []
     for line in fin:
         line = line.strip()
-	    line = line.split(',')
-	    wline = addVertical(line)
+        line = line.split(',')
+        wline = addVertical(line)
             fout.write(wline)
 	if header:
             hline = addHeader(line)
