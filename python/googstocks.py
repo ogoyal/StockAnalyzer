@@ -2,7 +2,9 @@ import os
 import csv
 import json
 import yaml
-from googlefinance import getQuotes
+import datetime
+# from googlefinance import getQuotes (DEPRECATED)
+from iexfinance import Stock
 
 '''
 {u'Index': u'NASDAQ', u'LastTradeWithCurrency': u'927.96', u'LastTradeDateTime': u'2017-08-04T16:00:00Z', u'LastTradePrice': u'927.96', u'LastTradeTime': u'4:00PM EDT', u'LastTradeDateTimeLong': u'Aug 4, 4:00PM EDT', u'StockSymbol': u'GOOG', u'ID': u'304466804484872'}
@@ -11,14 +13,13 @@ from googlefinance import getQuotes
 csv_path = "build/readme/example.csv"
 def data(tickers, sector):
     slist = []
-    stocks = getQuotes(tickers)
-    for stock in stocks:
-        json_string = json.dumps(stock)
-        parsed_json = json.loads(json_string)
-        date = parsed_json['LastTradeDateTime'].split('T')[0]
-        symbol = parsed_json['StockSymbol']
-        price = parsed_json['LastTradePrice']
-        slist.append([date, symbol, price])
+    print(tickers)
+    stocks_object = Stock(tickers)
+    stocks = stocks_object.get_price()
+    date = datetime.datetime.today().strftime('%Y-%m-%d')
+    for company in stocks:
+        price = stocks[company]
+        slist.append([date, company, price])
     output(slist)
 
 def setup():
@@ -30,7 +31,7 @@ def setup():
         writer.writerow(('Date', 'Stocks', 'Price($)'))
     finally:
         f.close()
-        
+
 def output(slist):
     f = open(csv_path, 'a+')
     try:
@@ -54,4 +55,3 @@ def main():
 
 if __name__== "__main__":
     main()
-

@@ -8,4 +8,5 @@ django-registration
 django_forms_bootstrap
 pytest
 pyyaml
-
+wallstreet
+iexfinance
