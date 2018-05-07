@@ -31,10 +31,10 @@ def main():
     header = 1
     title = []
     for line in fin:
-	line = line.strip()
-	line = line.split(',')
-	wline = addVertical(line)
-        fout.write(wline)
+        line = line.strip()
+	    line = line.split(',')
+	    wline = addVertical(line)
+            fout.write(wline)
 	if header:
             hline = addHeader(line)
 	    fout.write(hline)
@@ -44,4 +44,3 @@ def main():
 
 if __name__== "__main__":
     main()
-
