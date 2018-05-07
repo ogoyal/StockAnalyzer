@@ -8,7 +8,7 @@ from iexfinance import Stock
 class StockAnalyzerTest(unittest.TestCase):
 
     def setUp(self):
-        stock = Stock("GOOG")
+        stock = Stock(["GOOG", "TSLA"])
         self.company = stock.get_price()
         # stock = getQuotes("GOOG")[0]  (DEPRECATED)
         # json_string = json.dumps(stock)
