@@ -34,7 +34,7 @@ def main():
         line = line.strip()
         line = line.split(',')
         wline = addVertical(line)
-            fout.write(wline)
+        fout.write(wline)
 	if header:
             hline = addHeader(line)
 	    fout.write(hline)
