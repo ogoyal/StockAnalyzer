@@ -36,4 +36,4 @@ class StockAnalyzerTest(unittest.TestCase):
     def test_tickers(self):
         with open('tickers.yml', 'r') as stream:
             tickers = yaml.load(stream)
-	self.assertTrue(tickers)
+        self.assertTrue(tickers)
