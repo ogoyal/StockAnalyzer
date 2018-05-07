@@ -9,10 +9,11 @@ class StockAnalyzerTest(unittest.TestCase):
 
     def setUp(self):
         stock = Stock("GOOG")
+        self.company = stock.get_price()
         # stock = getQuotes("GOOG")[0]  (DEPRECATED)
         # json_string = json.dumps(stock)
         # parsed_json = json.loads(json_string)
-	    self.company = stock.get_price()
+
 
     '''
     Test Google Api Functions
