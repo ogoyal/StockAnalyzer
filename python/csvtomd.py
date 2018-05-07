@@ -35,10 +35,10 @@ def main():
         line = line.split(',')
         wline = addVertical(line)
         fout.write(wline)
-    if header:
-        hline = addHeader(line)
-        fout.write(hline)
-        header = 0
+        if header:
+            hline = addHeader(line)
+            fout.write(hline)
+            header = 0
     fin.close()
     fout.close()
 
