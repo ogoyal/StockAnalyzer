@@ -1,30 +1,33 @@
 import json
 import yaml
 import unittest
-from googlefinance import getQuotes
+import datetime
+from iexfinance import Stock
+#from googlefinance import getQuotes (DEPRECATED)
 
 class StockAnalyzerTest(unittest.TestCase):
 
     def setUp(self):
-        stock = getQuotes("GOOG")[0]
-        json_string = json.dumps(stock)
-        parsed_json = json.loads(json_string)
-	self.company = parsed_json
-    
+        stock = Stock("GOOG")
+        # stock = getQuotes("GOOG")[0]  (DEPRECATED)
+        # json_string = json.dumps(stock)
+        # parsed_json = json.loads(json_string)
+	self.company = stock.get_price()
+
     '''
     Test Google Api Functions
     '''
     def test_get_date(self):
-        price = self.company['LastTradeDateTime'].split('T')[0]
-        self.assertTrue(price)
+        date = datetime.datetime.today().strftime('%Y-%m-%d')
+        self.assertTrue(date)
 
     def test_symbol(self):
-        symbol = self.company['StockSymbol']
+        symbol = self.company.keys()
         self.assertTrue(symbol)
 
     def test_get_price(self):
-        date = self.company['LastTradePrice']
-        self.assertTrue(date)
+        price = self.company['GOOG']
+        self.assertTrue(price)
 
     '''
     Test tickers.yml
@@ -33,4 +36,3 @@ class StockAnalyzerTest(unittest.TestCase):
         with open('tickers.yml', 'r') as stream:
             tickers = yaml.load(stream)
 	self.assertTrue(tickers)
-
