@@ -67,4 +67,15 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+
+  # Python Setup
+  config.vm.provision "installpython", type: "shell", inline: <<-SHELL
+      apt-get install python3-setuptools -y
+      apt-get install python3-pip -y
+  SHELL
+
+  config.vm.provision "installvirtualenv", type: "shell", inline: <<-SHELL
+      pip install virtualenv
+  SHELL
+
 end
