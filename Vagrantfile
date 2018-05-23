@@ -5,6 +5,7 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
+
 Vagrant.configure("2") do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
@@ -12,7 +13,8 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/trusty64"
+
+  config.vm.box = "bento/centos-7.2"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -63,19 +65,24 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
 
-  # Python Setup
-  config.vm.provision "installpython", type: "shell", inline: <<-SHELL
-      apt-get install python3-setuptools -y
-      apt-get install python3-pip -y
+  # Setup - yum installs
+  config.vm.provision "setup", type: "shell", inline: <<-SHELL
+    yum -y install epel-release
+    yum -y install git
+    yum -y install cmake
+    yum -y install vim
+    yum -y install gcc-c++
+    yum -y install boost-devel
+    yum -y install python36
   SHELL
 
-  config.vm.provision "installvirtualenv", type: "shell", inline: <<-SHELL
-      pip install virtualenv
+  # Setup environment for StockAnalyzer
+  config.vm.provision "dependencies", type: "shell", inline: <<-SHELL
+    python3.6 -m venv venv
+    source venv/bin/activate
+    cd /vagrant
+    pip install -r requirements.txt
   SHELL
 
 end
