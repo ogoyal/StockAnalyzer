@@ -4,23 +4,23 @@ Today's data:
 
 | Date| Stocks| Price($) | 
 | --- | --- | ---  | 
-| 2018-05-28| MSFT| 98.36 | 
-| 2018-05-28| FB| 184.92 | 
-| 2018-05-28| AMD| 13.54 | 
-| 2018-05-28| AAPL| 188.58 | 
-| 2018-05-28| ATVI| 71.46 | 
-| 2018-05-28| AMZN| 1610.15 | 
-| 2018-05-28| BOX| 27.41 | 
-| 2018-05-28| PCG| 44.66 | 
-| 2018-05-28| TSLA| 278.85 | 
-| 2018-05-28| GE| 14.63 | 
-| 2018-05-28| BA| 360.09 | 
-| 2018-05-28| LMT| 320.8 | 
-| 2018-05-28| RTN| 211.27 | 
-| 2018-05-28| COST| 198.36 | 
-| 2018-05-28| WMT| 82.46 | 
-| 2018-05-28| FDX| 251.5 | 
-| 2018-05-28| UPS| 115.49 | 
+| 2018-05-29| [MSFT](https://plot.ly/~ogoyal/2)| 98.36 | 
+| 2018-05-29| [FB](https://plot.ly/~ogoyal/4)| 184.92 | 
+| 2018-05-29| [AMD](https://plot.ly/~ogoyal/6)| 13.54 | 
+| 2018-05-29| [AAPL](https://plot.ly/~ogoyal/8)| 188.58 | 
+| 2018-05-29| [ATVI](https://plot.ly/~ogoyal/10)| 71.46 | 
+| 2018-05-29| [AMZN](https://plot.ly/~ogoyal/12)| 1610.15 | 
+| 2018-05-29| [BOX](https://plot.ly/~ogoyal/14)| 27.41 | 
+| 2018-05-29| [PCG](https://plot.ly/~ogoyal/16)| 44.66 | 
+| 2018-05-29| [TSLA](https://plot.ly/~ogoyal/18)| 278.85 | 
+| 2018-05-29| [GE](https://plot.ly/~ogoyal/20)| 14.63 | 
+| 2018-05-29| [BA](https://plot.ly/~ogoyal/22)| 360.09 | 
+| 2018-05-29| [LMT](https://plot.ly/~ogoyal/24)| 320.8 | 
+| 2018-05-29| [RTN](https://plot.ly/~ogoyal/26)| 211.27 | 
+| 2018-05-29| [COST](https://plot.ly/~ogoyal/28)| 198.36 | 
+| 2018-05-29| [WMT](https://plot.ly/~ogoyal/30)| 82.46 | 
+| 2018-05-29| [FDX](https://plot.ly/~ogoyal/32)| 251.5 | 
+| 2018-05-29| [UPS](https://plot.ly/~ogoyal/34)| 115.49 | 
 
 ### Build/Run project
 
