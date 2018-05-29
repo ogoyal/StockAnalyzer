@@ -6,7 +6,7 @@ before_install:
 install: pip install -r requirements.txt
 script:
 - py.test test/unittests.py
-- make
+#- make
 notifications:
   email: false
 env:
