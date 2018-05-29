@@ -2,7 +2,6 @@ import os
 import csv
 import json
 import yaml
-import datetime
 import plotly.plotly as py
 import plotly.graph_objs as go
 import pandas_datareader.data as web
@@ -16,7 +15,7 @@ def data(tickers, sector):
     print(tickers)
     stocks_object = Stock(tickers)
     stocks = stocks_object.get_price()
-    date = datetime.datetime.today().strftime('%Y-%m-%d')
+    date = datetime.today().strftime('%Y-%m-%d')
     for company in stocks:
         price = stocks[company]
         slist.append([date, company, price])
