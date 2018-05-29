@@ -8,3 +8,5 @@ pytest
 pyyaml
 wallstreet
 iexfinance
+pandas_datareader
+plotly

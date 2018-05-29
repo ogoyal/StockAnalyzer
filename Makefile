@@ -7,7 +7,7 @@ build:
 	cp python/intro.md python/conclusion.md build/readme
 
 csv:
-	python python/googstocks.py
+	python python/stocks.py
 
 output:
 	cd build; cmake ../C++/; \

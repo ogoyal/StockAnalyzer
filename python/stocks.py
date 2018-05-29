@@ -3,12 +3,12 @@ import csv
 import json
 import yaml
 import datetime
-# from googlefinance import getQuotes (DEPRECATED)
-from iexfinance import Stock
+import plotly.plotly as py
+import plotly.graph_objs as go
+import pandas_datareader.data as web
 
-'''
-{u'Index': u'NASDAQ', u'LastTradeWithCurrency': u'927.96', u'LastTradeDateTime': u'2017-08-04T16:00:00Z', u'LastTradePrice': u'927.96', u'LastTradeTime': u'4:00PM EDT', u'LastTradeDateTimeLong': u'Aug 4, 4:00PM EDT', u'StockSymbol': u'GOOG', u'ID': u'304466804484872'}
-'''
+from datetime import datetime
+from iexfinance import Stock
 
 csv_path = "build/readme/example.csv"
 def data(tickers, sector):
