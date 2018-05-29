@@ -3,17 +3,12 @@ import yaml
 import unittest
 import datetime
 from iexfinance import Stock
-#from googlefinance import getQuotes (DEPRECATED)
 
 class StockAnalyzerTest(unittest.TestCase):
 
     def setUp(self):
         stock = Stock(["GOOG", "TSLA"])
         self.company = stock.get_price()
-        # stock = getQuotes("GOOG")[0]  (DEPRECATED)
-        # json_string = json.dumps(stock)
-        # parsed_json = json.loads(json_string)
-
 
     '''
     Test Google Api Functions
