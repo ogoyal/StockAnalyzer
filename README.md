@@ -4,11 +4,11 @@ Today's data:
 
 | Date| Stocks| Price($) | 
 | --- | --- | ---  | 
-| 2018-06-11| [MSFT](https://plot.ly/~ogoyal/2)| 101.39 | 
-| 2018-06-11| [FB](https://plot.ly/~ogoyal/4)| 192.13 | 
-| 2018-06-11| [AMD](https://plot.ly/~ogoyal/6)| 15.49 | 
-| 2018-06-11| [AAPL](https://plot.ly/~ogoyal/8)| 191.23 | 
-| 2018-06-11| [ATVI](https://plot.ly/~ogoyal/10)| 75.33 | 
+| 2018-06-11| [MSFT](https://plot.ly/~ogoyal/2)| 101.42 | 
+| 2018-06-11| [FB](https://plot.ly/~ogoyal/4)| 192.14 | 
+| 2018-06-11| [AMD](https://plot.ly/~ogoyal/6)| 15.51 | 
+| 2018-06-11| [AAPL](https://plot.ly/~ogoyal/8)| 191.27 | 
+| 2018-06-11| [ATVI](https://plot.ly/~ogoyal/10)| 75.345 | 
 | 2018-06-11| [AMZN](https://plot.ly/~ogoyal/12)| 1688.31 | 
 | 2018-06-11| [BOX](https://plot.ly/~ogoyal/14)| 26.01 | 
 | 2018-06-11| [PCG](https://plot.ly/~ogoyal/16)| 39.59 | 
