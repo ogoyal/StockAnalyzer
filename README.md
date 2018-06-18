@@ -4,23 +4,23 @@ Today's data:
 
 | Date| Stocks| Price($) | 
 | --- | --- | ---  | 
-| 2018-06-15| [MSFT](https://plot.ly/~ogoyal/2)| 100.13 | 
-| 2018-06-15| [FB](https://plot.ly/~ogoyal/4)| 195.85 | 
-| 2018-06-15| [AMD](https://plot.ly/~ogoyal/6)| 16.34 | 
-| 2018-06-15| [AAPL](https://plot.ly/~ogoyal/8)| 188.84 | 
-| 2018-06-15| [ATVI](https://plot.ly/~ogoyal/10)| 77.41 | 
-| 2018-06-15| [AMZN](https://plot.ly/~ogoyal/12)| 1715.97 | 
-| 2018-06-15| [BOX](https://plot.ly/~ogoyal/14)| 26.78 | 
-| 2018-06-15| [PCG](https://plot.ly/~ogoyal/16)| 40.2 | 
-| 2018-06-15| [TSLA](https://plot.ly/~ogoyal/18)| 358.17 | 
-| 2018-06-15| [GE](https://plot.ly/~ogoyal/20)| 13.3 | 
-| 2018-06-15| [BA](https://plot.ly/~ogoyal/22)| 357.88 | 
-| 2018-06-15| [LMT](https://plot.ly/~ogoyal/24)| 310.14 | 
-| 2018-06-15| [RTN](https://plot.ly/~ogoyal/26)| 201.53 | 
-| 2018-06-15| [COST](https://plot.ly/~ogoyal/28)| 207.32 | 
-| 2018-06-15| [WMT](https://plot.ly/~ogoyal/30)| 83.7 | 
-| 2018-06-15| [FDX](https://plot.ly/~ogoyal/32)| 264.56 | 
-| 2018-06-15| [UPS](https://plot.ly/~ogoyal/34)| 116.77 | 
+| 2018-06-18| [MSFT](https://plot.ly/~ogoyal/2)| 101.06 | 
+| 2018-06-18| [FB](https://plot.ly/~ogoyal/4)| 198.645 | 
+| 2018-06-18| [AMD](https://plot.ly/~ogoyal/6)| 17.125 | 
+| 2018-06-18| [AAPL](https://plot.ly/~ogoyal/8)| 189.16 | 
+| 2018-06-18| [ATVI](https://plot.ly/~ogoyal/10)| 77.42 | 
+| 2018-06-18| [AMZN](https://plot.ly/~ogoyal/12)| 1722.93 | 
+| 2018-06-18| [BOX](https://plot.ly/~ogoyal/14)| 28.04 | 
+| 2018-06-18| [PCG](https://plot.ly/~ogoyal/16)| 39.945 | 
+| 2018-06-18| [TSLA](https://plot.ly/~ogoyal/18)| 362.28 | 
+| 2018-06-18| [GE](https://plot.ly/~ogoyal/20)| 13.2 | 
+| 2018-06-18| [BA](https://plot.ly/~ogoyal/22)| 354.6 | 
+| 2018-06-18| [LMT](https://plot.ly/~ogoyal/24)| 309.52 | 
+| 2018-06-18| [RTN](https://plot.ly/~ogoyal/26)| 202.01 | 
+| 2018-06-18| [COST](https://plot.ly/~ogoyal/28)| 207.62 | 
+| 2018-06-18| [WMT](https://plot.ly/~ogoyal/30)| 83.44 | 
+| 2018-06-18| [FDX](https://plot.ly/~ogoyal/32)| 264.54 | 
+| 2018-06-18| [UPS](https://plot.ly/~ogoyal/34)| 117.23 | 
 
 ### Build/Run project
 
