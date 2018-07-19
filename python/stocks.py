@@ -5,6 +5,8 @@ import yaml
 import plotly.plotly as py
 import plotly.tools as pt
 import plotly.graph_objs as go
+import pandas as pd
+pd.core.common.is_list_like = pd.api.types.is_list_like
 import pandas_datareader.data as web
 
 from datetime import datetime
