@@ -4,23 +4,23 @@ Today's data:
 
 | Date| Stocks| Price($) | 
 | --- | --- | ---  | 
-| 2018-12-24| [BOX](https://plot.ly/~ogoyal/14)| 16.26 | 
-| 2018-12-24| [AAPL](https://plot.ly/~ogoyal/8)| 150.44 | 
-| 2018-12-24| [AMD](https://plot.ly/~ogoyal/6)| 16.8 | 
-| 2018-12-24| [FB](https://plot.ly/~ogoyal/4)| 129.52 | 
-| 2018-12-24| [ATVI](https://plot.ly/~ogoyal/10)| 45.47 | 
-| 2018-12-24| [AMZN](https://plot.ly/~ogoyal/12)| 1381.46 | 
-| 2018-12-24| [MSFT](https://plot.ly/~ogoyal/2)| 96.895 | 
-| 2018-12-24| [GE](https://plot.ly/~ogoyal/20)| 7.065 | 
-| 2018-12-24| [PCG](https://plot.ly/~ogoyal/16)| 23.14 | 
-| 2018-12-24| [TSLA](https://plot.ly/~ogoyal/18)| 301.335 | 
-| 2018-12-24| [RTN](https://plot.ly/~ogoyal/26)| 149.53 | 
-| 2018-12-24| [LMT](https://plot.ly/~ogoyal/24)| 249.72 | 
-| 2018-12-24| [BA](https://plot.ly/~ogoyal/22)| 300.92 | 
-| 2018-12-24| [FDX](https://plot.ly/~ogoyal/32)| 155.31 | 
-| 2018-12-24| [COST](https://plot.ly/~ogoyal/28)| 193.86 | 
-| 2018-12-24| [UPS](https://plot.ly/~ogoyal/34)| 92.34 | 
-| 2018-12-24| [WMT](https://plot.ly/~ogoyal/30)| 87.36 | 
+| 2018-12-25| [BOX](https://plot.ly/~ogoyal/14)| 15.76 | 
+| 2018-12-25| [AAPL](https://plot.ly/~ogoyal/8)| 146.83 | 
+| 2018-12-25| [AMD](https://plot.ly/~ogoyal/6)| 16.65 | 
+| 2018-12-25| [FB](https://plot.ly/~ogoyal/4)| 124.06 | 
+| 2018-12-25| [ATVI](https://plot.ly/~ogoyal/10)| 43.99 | 
+| 2018-12-25| [AMZN](https://plot.ly/~ogoyal/12)| 1343.96 | 
+| 2018-12-25| [MSFT](https://plot.ly/~ogoyal/2)| 94.13 | 
+| 2018-12-25| [GE](https://plot.ly/~ogoyal/20)| 6.92 | 
+| 2018-12-25| [PCG](https://plot.ly/~ogoyal/16)| 23.15 | 
+| 2018-12-25| [TSLA](https://plot.ly/~ogoyal/18)| 295.39 | 
+| 2018-12-25| [RTN](https://plot.ly/~ogoyal/26)| 146.67 | 
+| 2018-12-25| [LMT](https://plot.ly/~ogoyal/24)| 245.22 | 
+| 2018-12-25| [BA](https://plot.ly/~ogoyal/22)| 294.16 | 
+| 2018-12-25| [FDX](https://plot.ly/~ogoyal/32)| 152.7 | 
+| 2018-12-25| [COST](https://plot.ly/~ogoyal/28)| 189.99 | 
+| 2018-12-25| [UPS](https://plot.ly/~ogoyal/34)| 89.89 | 
+| 2018-12-25| [WMT](https://plot.ly/~ogoyal/30)| 85.82 | 
 
 ### Build/Run project
 
