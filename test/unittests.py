@@ -2,7 +2,7 @@ import json
 import yaml
 import unittest
 import datetime
-from iexfinance import Stock
+from iexfinance.stocks import Stock
 
 class StockAnalyzerTest(unittest.TestCase):
 
