@@ -11,7 +11,7 @@ import pandas_datareader.data as web
 
 from datetime import datetime
 from datetime import timedelta
-from iexfinance import Stock
+from iexfinance.stocks import Stock
 
 csv_path = "build/readme/example.csv"
 def data(tickers, sector):
