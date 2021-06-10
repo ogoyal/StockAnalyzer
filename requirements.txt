@@ -1,4 +1,4 @@
-django==1.9.1
+django==2.2.24
 pytest
 pyyaml
 wallstreet
